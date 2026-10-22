@@ -1,0 +1,16 @@
+# Versions used for the results in the README (Python 3.10).
+#
+# Bit-exact model (python/s4d_golden.py): numpy only.
+numpy==2.2.6
+# Board test files (board/make_board_files.py)
+pandas==2.3.3          # ECG (PTB-XL tables)
+h5py==3.16.0           # RadioML (HDF5)
+scipy==1.15.3          # Speech Commands (16 -> 12 kHz resampling)
+soundfile==0.14.0      # Speech Commands (WAV files)
+Pillow==12.2.0         # sCIFAR (grayscale conversion)
+# Confusion matrices (board/paper_confusion.py)
+matplotlib==3.10.9
+# Training and quantization (training/): PyTorch with CUDA 12.1 wheels
+torch==2.5.1
+torchvision==0.20.1
+torchaudio==2.5.1
