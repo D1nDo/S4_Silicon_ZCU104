@@ -31,3 +31,6 @@ training/smoke/
 training/train_log.jsonl
 training/train_report.json
 training/*.json
+
+# Vivado runtime report
+dfx_runtime.txt
