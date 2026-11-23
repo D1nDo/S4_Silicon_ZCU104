@@ -1,0 +1,39 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.597073",
+   "Default View_TopLeft":"10,-18",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1950 -y 510 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -x 1600 -y 720 -defaultsOSRD
+preplace inst axi_smc_1 -pg 1 -lvl 2 -x 570 -y 720 -defaultsOSRD
+preplace inst rst_ps8_0_96M -pg 1 -lvl 1 -x 200 -y 540 -defaultsOSRD
+preplace inst s4d_core_axis_0 -pg 1 -lvl 3 -x 1080 -y 100 -defaultsOSRD
+preplace inst s4d_decoder_axis_0 -pg 1 -lvl 4 -x 1600 -y 310 -defaultsOSRD
+preplace inst s4d_encoder_axis_0 -pg 1 -lvl 2 -x 570 -y 300 -defaultsOSRD
+preplace inst s4d_weightrom_axis_0 -pg 1 -lvl 2 -x 570 -y 90 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 3 -x 1080 -y 540 -defaultsOSRD
+preplace netloc rst_ps8_0_96M_peripheral_aresetn 1 1 4 390 190 760 190 1410 560 NJ
+preplace netloc s4d_core_axis_0_wload_layer 1 1 3 420 200 NJ 200 1390
+preplace netloc s4d_core_axis_0_wload_start 1 1 3 400 180 720J 10 1390
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 5 20 430 380 210 770 310 1450 500 1780
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 4 30 440 NJ 440 NJ 440 1390
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 1 5 400 610 750J 630 1420J 610 1760J 630 2120
+preplace netloc axi_dma_0_M_AXI_MM2S 1 1 5 420 630 730J 640 1440J 620 1750J 640 2140
+preplace netloc axi_dma_0_M_AXI_S2MM 1 1 5 410 620 740J 650 1460J 630 1740J 650 2130
+preplace netloc axi_smc_1_M00_AXI 1 2 1 760 510n
+preplace netloc axi_smc_M00_AXI 1 4 1 1770 460n
+preplace netloc s4d_core_axis_0_m_axis_out 1 3 1 1450 70n
+preplace netloc s4d_decoder_axis_0_m_axis 1 4 1 1780 310n
+preplace netloc s4d_encoder_axis_0_m_axis 1 2 1 740 70n
+preplace netloc s4d_weightrom_axis_0_m_axis 1 2 1 730 70n
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 3 1 1430 510n
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 3 1 1400 530n
+levelinfo -pg 1 0 200 570 1080 1600 1950 2160
+pagesize -pg 1 -db -bbox -sgen 0 0 2160 810
+"
+}
+{
+   "da_axi4_cnt":"2"
+}
