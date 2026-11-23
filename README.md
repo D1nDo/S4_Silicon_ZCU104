@@ -11,7 +11,6 @@ One parametric RTL core runs four sequence-classification tasks. Each task is a 
 | Speech Commands | Speech Commands v0.02, 12 kHz | 12 audio samples, int16 | 35 | (128, 16) | 232,227 | `S4D_S_C` |
 | sCIFAR | CIFAR-10, sequential grayscale | 1 pixel, uint8 | 10 | (128, 64) | 301,322 | `S4D_sCIFAR` |
 
-![Architecture of the S4D accelerator on ZCU104](images/architecture.png)
 
 All models have L = 1024 time steps and 6 S4D layers. The size of each model is the smallest (H, N) whose validation metric stays within a fixed tolerance of the best one in a sweep over H ∈ {32, 64, 128} and N ∈ {16, 32, 64, 128} (scripts in `training/sizing/`). All arithmetic is fixed-point, and the logits read from the board are **bit-exact** with the fixed-point software model in `python/s4d_golden.py`.
 
