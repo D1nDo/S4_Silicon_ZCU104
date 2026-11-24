@@ -40,7 +40,7 @@ board/                   test on the board
 python/
   s4d_golden.py            bit-exact fixed-point model of the accelerator (reads mem/), any H and N
   plot_poles.py            poles of the quantized biquads -> images/quantized_poles.*
-  arch_diagram.py          draws a simplified matplotlib version of the architecture diagram
+  arch_diagram.py          simplified matplotlib diagram -> images/architecture_simplified.*
 training/                training and quantization scripts (see training/README.md)
   sizing/                  (H, N) sweep, quantization and fine-tuning of the selected models
 images/                  architecture diagram, confusion matrices, quantized poles

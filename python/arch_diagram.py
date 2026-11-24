@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Block diagram of the S4D accelerator on ZCU104 -> images/architecture.pdf and .png
+"""Block diagram of the S4D accelerator on ZCU104 -> images/architecture_simplified.pdf and .png
+
+The output name differs from images/Architecture.png (the figure used in the README):
+on Windows file names are case-insensitive, so "architecture.png" would overwrite it.
 
 Usage: python arch_diagram.py   (needs matplotlib)
 """
@@ -88,5 +91,5 @@ ax.annotate("", xy=(62, 10.5), xytext=(62, 13),
 ax.text(63, 11.2, "wload_start / wload_layer", ha="left", va="center", fontsize=7.5, color=WCOL)
 
 fig.tight_layout()
-fig.savefig(OUT / "architecture.pdf")
-fig.savefig(OUT / "architecture.png", dpi=150)
+fig.savefig(OUT / "architecture_simplified.pdf")            # vector version
+fig.savefig(OUT / "architecture_simplified.png", dpi=150)   # raster version (does not touch Architecture.png)
