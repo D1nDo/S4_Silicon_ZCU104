@@ -11,6 +11,7 @@ One parametric RTL core runs four sequence-classification tasks. Each task is a 
 | Speech Commands | Speech Commands v0.02, 12 kHz | 12 audio samples, int16 | 35 | (128, 16) | 232,227 | `S4D_S_C` |
 | sCIFAR | CIFAR-10, sequential grayscale | 1 pixel, uint8 | 10 | (128, 64) | 301,322 | `S4D_sCIFAR` |
 
+![Architecture of the S4D accelerator on ZCU104](images/Architecture.png)
 
 All models have L = 1024 time steps and 6 S4D layers. The size of each model is the smallest (H, N) whose validation metric stays within a fixed tolerance of the best one in a sweep over H ∈ {32, 64, 128} and N ∈ {16, 32, 64, 128} (scripts in `training/sizing/`). All arithmetic is fixed-point, and the logits read from the board are **bit-exact** with the fixed-point software model in `python/s4d_golden.py`.
 
@@ -39,7 +40,7 @@ board/                   test on the board
 python/
   s4d_golden.py            bit-exact fixed-point model of the accelerator (reads mem/), any H and N
   plot_poles.py            poles of the quantized biquads -> images/quantized_poles.*
-  arch_diagram.py          draws images/architecture.pdf and .png
+  arch_diagram.py          draws a simplified matplotlib version of the architecture diagram
 training/                training and quantization scripts (see training/README.md)
   sizing/                  (H, N) sweep, quantization and fine-tuning of the selected models
 images/                  architecture diagram, confusion matrices, quantized poles
@@ -251,3 +252,8 @@ The model needs only `numpy`. Regenerating the input files also needs `pandas` (
 - **CIFAR-10:** Krizhevsky, 2009.
 
 The datasets are not included; download them from their original sources under their own licenses.
+
+## Authors
+
+- Ludovico Dindelli ([@D1nDo](https://github.com/D1nDo))
+- Massimiliano Leone ([@leonemassimiliano0-hub](https://github.com/leonemassimiliano0-hub))
